@@ -7,10 +7,10 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 
 // Configure Google OAuth 2.0 Strategy
 passport.use(new GoogleStrategy({
-    clientID: '124971979187-7ualcbh3ephr1kqld4m47eei4f0siiu1.apps.googleusercontent.com',
-    clientSecret: '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',
-    callbackURL: 'http://localhost:3000/auth/google/callback'
-  },
+  clientID: process.env.CLIENTID,
+  clientSecret: process.env.CLIENTSECRET,
+  callbackURL: process.env.CALLBACKURL
+},
   async (accessToken, refreshToken, profile, done) => {
     try {
       // Check if the user already exists in the database
@@ -81,7 +81,7 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   // Login logic
-  console.log(req.body,"body")
+  console.log(req.body, "body")
   const { email, password } = req.body;
 
   try {
