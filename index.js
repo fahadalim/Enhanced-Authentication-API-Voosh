@@ -22,6 +22,11 @@ connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 app.use(json());
 
 // Routes
+
+app.get('/', (req, res) => {
+  res.send('Welcome');
+})
+
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
 
