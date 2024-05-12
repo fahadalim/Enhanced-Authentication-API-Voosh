@@ -28,6 +28,9 @@ API Documentation
 Introduction
 The Enhanced Authentication API (Voosh) provides endpoints for user registration, authentication, profile management, and role-based access control. This documentation outlines the available endpoints, their functionalities, and the expected request/response formats.
 
+Prod base url: https://enhanced-authentication-api-voosh.onrender.com/
+Loacl base url : http://localhost:3000/
+
 Authentication
 Register User
 Endpoint: POST auth/register
