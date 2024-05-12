@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
+import 'dotenv/config'
 
 // Configure Google OAuth 2.0 Strategy
 passport.use(new GoogleStrategy({
